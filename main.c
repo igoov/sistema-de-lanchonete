@@ -24,18 +24,18 @@
         float novoPreco;
 
         printf("Digite o nome do novo produto: ");
-        scanf(" %[^\n]", novoProduto); // lù uma linha inteiro, incluindo espaùos
+        scanf(" %[^\n]", novoProduto); // lÔøΩ uma linha inteiro, incluindo espaÔøΩos
 
-        printf("Digite o preÁo do novo produto: ");
+        printf("Digite o preÔøΩo do novo produto: ");
         scanf("%f", &novoPreco);
 
-        // Realoca memùria para adicionar um novo produto
+        // Realoca memÔøΩria para adicionar um novo produto
         char **tempProdutos = realloc(*produtos, (*numProdutos + 1) * sizeof(char *));
         float *tempPrecos = realloc(*precos, (*numProdutos + 1) * sizeof(float));
 
         if (tempProdutos == NULL || tempPrecos == NULL)
         {
-            printf("Erro ao alocar memÛria.\n");
+            printf("Erro ao alocar memÔøΩria.\n");
             return;
         }
 
@@ -46,9 +46,9 @@
         (*produtos)[*numProdutos] = malloc(strlen(novoProduto) + 1);
         if ((*produtos)[*numProdutos] == NULL)
         {
-            printf("Erro ao alocar memÛria para o novo produto.\n");
-            free(tempProdutos); // Libera a memùria alocada se realloc falhar
-            free(tempPrecos);   // Libera a memùria alocada se realloc falhar
+            printf("Erro ao alocar memÔøΩria para o novo produto.\n");
+            free(tempProdutos); // Libera a memÔøΩria alocada se realloc falhar
+            free(tempPrecos);   // Libera a memÔøΩria alocada se realloc falhar
             return;
         }
 
@@ -68,33 +68,33 @@
         printf("=================================================================\n");
         for (int i = 0; i < numProdutos; i++)
         {
-            printf("%s\t|PreÁo: %.2f R$\t|CÛdigo:%d\n", produtos[i], precos[i], i + 1);
+            printf("%s\t|PreÔøΩo: %.2f R$\t|CÔøΩdigo:%d\n", produtos[i], precos[i], i + 1);
         }
     }
 
     int main()
     {
 
-        setlocale(LC_ALL, "Portuguese"); // setlocale(LC_ALL) = acentuaùùo
+        setlocale(LC_ALL, "Portuguese"); // setlocale(LC_ALL) = acentuaÔøΩÔøΩo
         system("color 00");              // cor("color f0") = branco
 
         int qtd;                           // int = inteiro
-        float totalCompra, totalGeral = 0; // totalCompra = soma dos lanches //float = numero real //o geral ù utilizado para armazenar
+        float totalCompra, totalGeral = 0; // totalCompra = soma dos lanches //float = numero real //o geral ÔøΩ utilizado para armazenar
         totalGeral = 0.0;                  // inicia com a compra atual
         int op;
-        // op = opùùo
-        // do-while quando ù pra menu, ù um laùo de repetiùùo( 1 - While, +_2 - Do While, 3 - for)
-        // adicionar vetores (Array de strings) para armazenar o produtos e seus preùos:
+        // op = opÔøΩÔøΩo
+        // do-while quando ÔøΩ pra menu, ÔøΩ um laÔøΩo de repetiÔøΩÔøΩo( 1 - While, +_2 - Do While, 3 - for)
+        // adicionar vetores (Array de strings) para armazenar o produtos e seus preÔøΩos:
 
         // Declare produtos e precos como ponteiros
         char **produtos = malloc(100 * sizeof(char *));
         float *precos = malloc(100 * sizeof(float));
 
-        // Inicializando os produtos e preÁos
+        // Inicializando os produtos e preÔøΩos
         produtos[0] = malloc(30);
         strcpy(produtos[0], "Cachorro Quente");
         produtos[1] = malloc(30);
-        strcpy(produtos[1], "SanduÌche");
+        strcpy(produtos[1], "Sanduiche");
         produtos[2] = malloc(30);
         strcpy(produtos[2], "Coxinha");
         produtos[3] = malloc(30);
@@ -108,11 +108,11 @@
         precos[3] = 6.0;
         precos[4] = 3.50;
 
-        int numProdutos = 5; // n˙mero de produtos iniciais
+        int numProdutos = 5; // nÔøΩmero de produtos iniciais
 
-        // char *produtos[100] = {"Cachorro Quente", "Sanduùche", "Coxinha", "Bomba", "Refrigerante"};
+        // char *produtos[100] = {"Cachorro Quente", "SanduÔøΩche", "Coxinha", "Bomba", "Refrigerante"};
         // // char = caractere em igles
-        // //* = um ponteiro, uma variavel que armazena o endereùo de outra variùvel na memùria.
+        // //* = um ponteiro, uma variavel que armazena o endereÔøΩo de outra variÔøΩvel na memÔøΩria.
 
         // float precos[100] = {6.0, 5.50, 5.0, 6.0, 3.50};
         // float = numero real
@@ -125,17 +125,17 @@
         int contadorPedidos = 0; // contador para os pedidos
         do
         {
-            // do = faùa
+            // do = faÔøΩa
 
             int sair = 0;
             printf("\n\n\n=================================================================\n");
-            printf("==========** Digite o cÛdigo do produto **=======================\n");
+            printf("==========** Digite o codigo do produto **=======================\n");
             printf("=================================================================\n");
-            printf("Cachorro Quente\t|PreÁo: 6.00 R$\t|CÛdigo:1\n");
-            printf("Sanduche\t|PreÁo: 5.50 R$\t|CÛdigo:2\n");
-            printf("Coxinha\t\t|PreÁo: 5.00 R$\t|CÛdigo:3\n");
-            printf("Bomba\t\t|PreÁo: 6.00 R$\t|CÛdigo:4\n");
-            printf("Refrigerante\t|PreÁo: 3.50 R$\t|CÛdigo:5\n");
+            printf("Cachorro Quente\t|Preco: 6.00 R$\t|Codigo:1\n");
+            printf("Sanduche\t|Preco: 5.50 R$\t|Codigo:2\n");
+            printf("Coxinha\t\t|Preco: 5.00 R$\t|Codigo:3\n");
+            printf("Bomba\t\t|Preco: 6.00 R$\t|Codigo:4\n");
+            printf("Refrigerante\t|Preco: 3.50 R$\t|Codigo:5\n");
             printf("==================================================================\n");
             printf("==========** Digite [0] Para Finalizar a compra **================\n");
             printf("==================================================================\n");
@@ -171,11 +171,11 @@
                 pedidos[contadorPedidos].valorTotal = totalCompra;
                 contadorPedidos++;
 
-                // break = para o bloco de execuùùo
+                // break = para o bloco de execuÔøΩÔøΩo
                 break;
 
             case 2:
-                printf("[SanduÌche]\nDigite a quantidade:");
+                printf("[Sanduche]\nDigite a quantidade:");
                 scanf("%d", &qtd);
                 system("cls");
 
@@ -188,7 +188,7 @@
                 pedidos[contadorPedidos].valorTotal = totalCompra;
                 contadorPedidos++;
 
-                // break = para o bloco de execuùùo
+                // break = para o bloco de execuÔøΩÔøΩo
                 break;
 
             case 3:
@@ -205,7 +205,7 @@
                 pedidos[contadorPedidos].valorTotal = totalCompra;
                 contadorPedidos++;
 
-                // break = para o bloco de execuùùo
+                // break = para o bloco de execuÔøΩÔøΩo
                 break;
 
             case 4:
@@ -222,7 +222,7 @@
                 pedidos[contadorPedidos].valorTotal = totalCompra;
                 contadorPedidos++;
 
-                // break = para o bloco de execuùùo
+                // break = para o bloco de execuÔøΩÔøΩo
                 break;
 
             case 5:
@@ -238,34 +238,34 @@
                 pedidos[contadorPedidos].valorTotal = totalCompra;
                 contadorPedidos++;
 
-                // break = para o bloco de execuùùo
+                // break = para o bloco de execuÔøΩÔøΩo
                 break;
 
             case 0:
                 printf("[Compra finalizada.]");
                 sair = 1;
-                // break = para o bloco de execuùùo
+                // break = para o bloco de execuÔøΩÔøΩo
                 break;
 
             default:
-                printf("[OpÁ„o Inv·lida]\n");
+                printf("[Opcao Invalida]\n");
                 break;
             }
 
-            // se o int sair = 0, ira continuar e printar oq estar no if. se o sair = 1 vocù sai sem printar oq ta dentro do if
+            // se o int sair = 0, ira continuar e printar oq estar no if. se o sair = 1 vocÔøΩ sai sem printar oq ta dentro do if
 
             if (sair == 0)
             {
                 for (int i = 0; i < contadorPedidos; i++)
                 {
                     printf("%-20s %dx Unidades\t\t\t%.2f R$\n", pedidos[i].nome, pedidos[i].quantidade, pedidos[i].valorTotal); // estava certo, mas estava passando apenas um string (%s), faltando o string (%d) = faltando quantidade (intero) e o valor (real).
-                    //%-20s = indica que o texto deve ser alinhado ù esquerda, e 20 define a largura do campo como 20 caracteres.
+                    //%-20s = indica que o texto deve ser alinhado ÔøΩ esquerda, e 20 define a largura do campo como 20 caracteres.
                     //
                 }
             }
             // while = enquanto ! = 0
             //!= : diferente
-            //! : negaùùo
+            //! : negaÔøΩÔøΩo
             // diferente de 0 por causa do case 0, se for mudar pra finalizar com 1, ira mudar o case 0 para case 1 e o op != (diferente) 1
 
         } while (op != 0);
@@ -275,20 +275,20 @@
         for (int i = 0; i < contadorPedidos; i++)
         {
             printf("%-20s %dx Unidades\t\t\t%.2f R$\n", pedidos[i].nome, pedidos[i].quantidade, pedidos[i].valorTotal); // estava certo, mas estava passando apenas um string (%s), faltando o string (%d) = faltando quantidade (intero) e o valor (real).
-            //%-20s = ndica que o texto deve ser alinhado ù esquerda, e 20 define a largura do campo como 20 caracteres.
+            //%-20s = ndica que o texto deve ser alinhado ÔøΩ esquerda, e 20 define a largura do campo como 20 caracteres.
             //
         }
 
         // int (inteiro) = 0
-        // i <= 5; atribuiùùo e comeùa do 1, ent fica 1,2,3,4,
-        // i++ como comeùa do i ù atribuida a 5 e comeùa do 1, soma mais 1, por isso ++
+        // i <= 5; atribuiÔøΩÔøΩo e comeÔøΩa do 1, ent fica 1,2,3,4,
+        // i++ como comeÔøΩa do i ÔøΩ atribuida a 5 e comeÔøΩa do 1, soma mais 1, por isso ++
 
-        //%s um string que substitui o valor correspondente que ù passsado como argumento produtos [i]
-        //%d usado para imprimir um numero inteiro, sera substituido pelo valor correspondete q ù passado quantidades [i]
+        //%s um string que substitui o valor correspondente que ÔøΩ passsado como argumento produtos [i]
+        //%d usado para imprimir um numero inteiro, sera substituido pelo valor correspondete q ÔøΩ passado quantidades [i]
         //: caractere q separa um string (%s) e um numero (%d).
         //\n saltar uma linha
 
-        // for ù uma estrutura de repetiùùo; i = 0; i < 5 percorre 0 a 4 pq ja comeùa do 1; i++ = 4 + 1 (i = i + 1)
+        // for ÔøΩ uma estrutura de repetiÔøΩÔøΩo; i = 0; i < 5 percorre 0 a 4 pq ja comeÔøΩa do 1; i++ = 4 + 1 (i = i + 1)
         printf("\nTotal geral: %.2f R$\n", totalGeral);
 
         for (int i = 0; i < numProdutos; i++)
@@ -296,7 +296,7 @@
             free(produtos[i]); // Libera cada string alocada
         }
         free(produtos); // Libera o array de ponteiros
-        free(precos);   // Libera o array de preÁos
+        free(precos);   // Libera o array de preÔøΩos
 
         return 0;
     }
