@@ -291,6 +291,8 @@
         // for � uma estrutura de repeti��o; i = 0; i < 5 percorre 0 a 4 pq ja come�a do 1; i++ = 4 + 1 (i = i + 1)
         printf("\nTotal geral: %.2f R$\n", totalGeral);
 
+        getchar(); // Espera o usuário pressionar Enter  
+
         for (int i = 0; i < numProdutos; i++)
         {
             free(produtos[i]); // Libera cada string alocada
